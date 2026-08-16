@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Vitor Mendes Padovani — Creative Portfólio</title>
+<meta name="description" content="Portfólio criativo de Vitor Mendes Padovani — Design, Programação, Criatividade e Edição.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Inter:wght@300..800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<!-- cursor personalizado -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- loader de entrada -->
+<div class="loader" id="loader">
+  <div class="loader-mark">VMP</div>
+</div>
+
+<!-- ruído sutil sobre toda a página -->
+<div class="noise-layer"></div>
+
+<!-- ===================== NAVBAR ===================== -->
+<header class="navbar" id="navbar">
+  <a href="#hero" class="nav-logo">VMP<span class="dot">.</span></a>
+
+  <nav class="nav-links" id="navLinks">
+    <a href="#sobre" class="nav-link" data-nav>Sobre</a>
+    <a href="#habilidades" class="nav-link" data-nav>Habilidades</a>
+    <a href="#trabalhos" class="nav-link" data-nav>Trabalhos</a>
+    <a href="#processo" class="nav-link" data-nav>Processo</a>
+    <a href="#evolucao" class="nav-link" data-nav>Evolução</a>
+    <a href="#contato" class="nav-link" data-nav>Contato</a>
+  </nav>
+
+  <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- ===================== 01 — HERO ===================== -->
+<section class="section hero" id="hero">
+  <div class="hero-bg">
+    <div class="hero-grid"></div>
+    <div class="glass-orb orb-1"></div>
+    <div class="glass-orb orb-2"></div>
+    <div class="hero-line line-1"></div>
+    <div class="hero-line line-2"></div>
+  </div>
+
+  <div class="hero-content">
+    <p class="eyebrow reveal-up">Design &nbsp;•&nbsp; Programming &nbsp;•&nbsp; Creativity &nbsp;•&nbsp; Digital</p>
+
+    <h1 class="hero-title">
+      <span class="line reveal-title" data-delay="0">CREATIVE</span>
+      <span class="line reveal-title accent" data-delay="1">PORTFÓLIO</span>
+    </h1>
+
+    <div class="hero-footer reveal-up" data-delay="2">
+      <span class="hero-name"></span>
+      <span class="hero-sep"></span>
+      <span class="hero-role"></span>
+    </div>
+  </div>
+
+  <a href="#sobre" class="scroll-indicator reveal-up" data-delay="3">
+    <span>SCROLL TO EXPLORE</span>
+    <span class="scroll-arrow">↓</span>
+  </a>
+</section>
+
+<!-- ===================== 02 — SOBRE MIM ===================== -->
+<section class="section about" id="sobre">
+  <div class="section-head">
+    <span class="section-num"></span>
+    <h2 class="section-title fade-in-up">SOBRE MIM</h2>
+  </div>
+
+  <div class="about-grid">
+    <div class="about-photo-wrap fade-in-up">
+      <div class="about-photo-frame" id="aboutPhotoFrame">
+        <div class="about-photo-inner">
+          <!-- Substitua static/icons/perfil.jpg pela sua foto real -->
+          <img src="{{ url_for('static', filename='images/perfil.jpg') }}" alt="Vitor Padovani">
+          <div class="about-photo-sheen"></div>
+          <span class="about-photo-tag">Vitor Padovani</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-text-wrap">
+      <div class="about-text fade-in-up">
+        <p>Eu sou <strong>Vitor Mendes Padovani</strong>, tenho 18 anos e curto tecnologia, programação, design e criar coisas novas.</p>
+        <p>Gosto de aprender na prática, testar ideias e sempre buscar evoluir no que faço.</p>
+        <p>Esse portfólio mostra um pouco dos meus projetos, das minhas habilidades e da minha evolução.</p>
+      </div>
+
+      <div class="about-meta fade-in-up">
+        <div class="about-meta-item">
+          <span class="about-meta-label">Idade</span>
+          <span class="about-meta-value">18</span>
+        </div>
+        <div class="about-meta-item">
+          <span class="about-meta-label">Foco</span>
+          <span class="about-meta-value">Design · Código · Edição</span>
+        </div>
+        <div class="about-meta-item">
+          <span class="about-meta-label">Mentalidade</span>
+          <span class="about-meta-value">Aprender fazendo</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 03 — HABILIDADES ===================== -->
+<section class="section skills" id="habilidades">
+  <div class="section-head">
+    <span class="section-num"></span>
+    <h2 class="section-title fade-in-up">MINHAS HABILIDADES</h2>
+  </div>
+
+  <div class="skills-grid" id="skillsGrid">
+
+    <div class="skill-card glass-card fade-in-up">
+      <div class="skill-tile" style="background:#D97757">
+        <img src="{{ url_for('static', filename='icons/claude.svg') }}" alt="Claude">
+      </div>
+      <span class="skill-name">Claude</span>
+    </div>
+
+    <div class="skill-card glass-card fade-in-up">
+      <div class="skill-tile" style="background:linear-gradient(135deg,#00C4CC,#7D2AE8)">
+        <img src="{{ url_for('static', filename='icons/canva.jpg') }}" alt="Canva">
+      </div>
+      <span class="skill-name">Canva</span>
+    </div>
+
+    <div class="skill-card glass-card fade-in-up">
+      <div class="skill-tile" style="background:#0a0a0a">
+        <img src="{{ url_for('static', filename='icons/alightmotion.jpg') }}" alt="Alight Motion">
+      </div>
+      <span class="skill-name">Alight Motion</span>
+    </div>
+
+    <div class="skill-card glass-card fade-in-up">
+      <div class="skill-tile" style="background:#0a0a0a">
+        <img src="{{ url_for('static', filename='icons/capcut.jpg') }}" alt="CapCut">
+      </div>
+      <span class="skill-name">CapCut</span>
+    </div>
+
+    <div class="skill-card glass-card fade-in-up">
+      <div class="skill-tile" style="background:#3776AB">
+        <img src="{{ url_for('static', filename='icons/python.jpg') }}" alt="Python">
+      </div>
+      <span class="skill-name">Python</span>
+    </div>
+
+    <div class="skill-card glass-card fade-in-up">
+      <div class="skill-tile" style="background:#18A497">
+        <img src="{{ url_for('static', filename='icons/photopea.jpg') }}" alt="Photopea">
+      </div>
+      <span class="skill-name">Photopea</span>
+    </div>
+
+    <div class="skill-card glass-card fade-in-up">
+      <div class="skill-tile" style="background:#F24E1E">
+        <img src="{{ url_for('static', filename='icons/figma.jpg') }}" alt="Figma">
+      </div>
+      <span class="skill-name">Figma</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== 04 — TRABALHOS ===================== -->
+<section class="section works" id="trabalhos">
+  <div class="works-bg">
+    <div class="works-grid"></div>
+    <div class="glass-orb orb-4"></div>
+    <div class="glass-orb orb-5"></div>
+    <div class="works-scanline"></div>
+  </div>
+
+  <div class="section-head">
+    <span class="section-num"></span>
+    <h2 class="section-title fade-in-up">Meus Projetos</h2>
+  </div>
+
+  <div class="works-wrap">
+
+    <div class="phone-stage fade-in-up">
+      <button class="ctrl-btn ctrl-btn-side" id="prevWork" aria-label="Trabalho anterior">←</button>
+
+      <div class="phone-frame">
+        <div class="phone-glow"></div>
+        <div class="phone-orbit"></div>
+        <div class="phone-orbit phone-orbit-2"></div>
+        <div class="phone" id="phone">
+          <div class="phone-notch"></div>
+          <div class="phone-btn phone-btn-power"></div>
+          <div class="phone-btn phone-btn-vol1"></div>
+          <div class="phone-btn phone-btn-vol2"></div>
+          <div class="phone-screen" id="phoneScreen">
+            <div class="phone-media" id="phoneMedia"></div>
+            <div class="phone-overlay">
+              <span class="phone-project-title" id="phoneTitle"></span>
+              <span class="phone-project-index" id="phoneIndex">01 / 01</span>
+            </div>
+            <button class="phone-playpause" id="phonePlayPause" aria-label="Reproduzir/Pausar" hidden>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="6,4 20,12 6,20"></polygon></svg>
+            </button>
+          </div>
+          <div class="phone-reflection"></div>
+          <div class="phone-reflection-2"></div>
+        </div>
+      </div>
+
+      <button class="ctrl-btn ctrl-btn-side" id="nextWork" aria-label="Próximo trabalho">→</button>
+    </div>
+
+    <div class="works-controls">
+      <p class="works-hint">Deslize o celular ou toque nas setas ao lado para navegar entre os trabalhos.</p>
+      <div class="works-thumbs" id="worksThumbs"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== 05 — PROCESSO CRIATIVO ===================== -->
+<section class="section process" id="processo">
+  <div class="section-head">
+    <span class="section-num"></span>
+    <h2 class="section-title fade-in-up">PROCESSO CRIATIVO</h2>
+  </div>
+
+  <div class="process-flow">
+    <div class="process-step fade-in-up">
+      <span class="process-index"></span>
+      <h3>IDEIA</h3>
+      <p>O ponto de partida: uma referência, uma vontade de testar algo novo.</p>
+    </div>
+    <div class="process-connector"></div>
+    <div class="process-step fade-in-up">
+      <span class="process-index"></span>
+      <h3>EXPERIMENTAÇÃO</h3>
+      <p>Testar ferramentas, formatos e caminhos diferentes até encontrar o certo.</p>
+    </div>
+    <div class="process-connector"></div>
+    <div class="process-step fade-in-up">
+      <span class="process-index"></span>
+      <h3>CRIAÇÃO</h3>
+      <p>Colocar a mão na massa: design, código ou edição ganhando forma.</p>
+    </div>
+    <div class="process-connector"></div>
+    <div class="process-step fade-in-up">
+      <span class="process-index"></span>
+      <h3>RESULTADO</h3>
+      <p>O projeto finalizado — e o ponto de partida para o próximo.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 06 — EVOLUÇÃO ===================== -->
+<section class="section evolution" id="evolucao">
+  <div class="evolution-bg"><div class="glass-orb orb-3"></div></div>
+  <div class="evolution-content">
+    <span class="section-num fade-in-up"></span>
+    <h2 class="evolution-title fade-in-up">EM CONSTANTE<br><span class="accent">EVOLUÇÃO</span></h2>
+    <p class="evolution-tagline fade-in-up">LEARN. CREATE. EVOLVE.</p>
+    <p class="evolution-text fade-in-up">Este portfólio é um retrato do momento atual — novos projetos, habilidades e trabalhos serão adicionados conforme a jornada continua.</p>
+  </div>
+</section>
+
+<!-- ===================== 07 — CONTATO ===================== -->
+<section class="section contact" id="contato">
+  <div class="contact-content">
+    <span class="section-num fade-in-up"></span>
+    <h2 class="contact-title fade-in-up">  TEM UM PROJETO<br>EM MENTE<span class="accent">?</span></h2>
+    <p class="contact-text fade-in-up" >Tecnologia, design e criatividade em constante movimento. Bora conversar.</p>
+
+    <div class="contact-name fade-in-up"> Vitor Padovani </div>
+
+    <div class="social-links fade-in-up" id="socialLinks">
+      <a href="#" class="social-link" data-social="instagram">Instagram</a>
+      <a href="#" class="social-link" data-social="linkedin">LinkedIn</a>
+      <a href="#" class="social-link" data-social="email">E-mail</a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> Rotiv</span>
+  </footer>
+</section>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
